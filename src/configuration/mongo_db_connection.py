@@ -5,7 +5,7 @@ import pymongo
 import certifi 
 from src.exception import MyException
 from src.logger import logging
-from src.constants import DATABASE_NAME, MONGO_URL_KEY
+from src.constants import DATABASE_NAME, MONGODB_URL_KEY
 
 # Load the certificate authority file to avoid timeout errors when connecting to MongoDB
 ca = certifi.where()
@@ -45,7 +45,7 @@ class MongoDBClient:
         """
         try:
             if MongoDBClient.client is None:
-                mongo_db_url = os.getenv(MONGO_URL_KEY)
+                mongo_db_url = os.getenv(MONGODB_URL_KEY)
                 if mongo_db_url is None:
                     raise Exception(f'Environment variable {mongo_db_url} is not set')
                 # New connection to MongoDB
