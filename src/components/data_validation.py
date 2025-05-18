@@ -29,7 +29,6 @@ from src.constants import SCHEMA_FILE_PATH
 
 
 class DataValidation:
-    # Initially taking ingestion, validation configuration and expected schema file
     def __init__(self, data_ingestion_artifact: DataIngestionArtifact, data_validation_config: DataValidationConfig):
         """
         :param data_ingestion_artifact: Output reference of data ingestion artifact stage

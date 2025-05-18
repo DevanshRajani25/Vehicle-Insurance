@@ -32,8 +32,7 @@ categorical_columns:
   - Vehicle_Damage
 
 # Drop columns
-drop_columns:
-  - _id 
+drop_columns: _id 
 
 # Standard scaling columns (Data transformation)
 num_features:
